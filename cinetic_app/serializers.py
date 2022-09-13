@@ -1,8 +1,4 @@
-from asyncore import read, write
-from copyreg import pickle
-from dataclasses import fields
-from importlib.resources import read_binary
-from random import triangular
+
 from rest_framework import serializers
 from cinetic_app.models import *
 

@@ -10,17 +10,17 @@ from rest_framework.response import Response
 # Create your views here.
 class Usuario_view(viewsets.ModelViewSet):
     queryset = Usuario.objects.all()
-    serializer_class = Usuario_Serializer
+    serializer_class = Usuario
 
 
 class Venta_view(viewsets.ModelViewSet):
     queryset = Venta.objects.all()
-    serializer_class = Venta_Serializer
+    serializer_class = Venta
 
 
 class Cust_view(viewsets.ModelViewSet):
     queryset = Cust.objects.all()
-    serializer_class = Cust_Serializer
+    serializer_class = Cust
 
 
 class Location_view(viewsets.ModelViewSet):
@@ -45,12 +45,12 @@ class Film_view(viewsets.ModelViewSet):
 
 class Combo_view(viewsets.ModelViewSet):
     queryset = Combo.objects.all()
-    serializer_class = Combo_Serializer
+    serializer_class = Combo
 
 
 class Seat_view(viewsets.ModelViewSet):
     queryset = Seat.objects.all()
-    serializer_class = Seat_Serializer
+    serializer_class = Seat
 
 
 class Snack_view(viewsets.ModelViewSet):

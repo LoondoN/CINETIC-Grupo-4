@@ -18,6 +18,7 @@ from django.urls import path, include
 from rest_framework import routers
 from cinetic_app.views import *
 
+
 router = routers.DefaultRouter()
 router.register('usuario',Usuario_view,basename='usuario')
 router.register('venta', Venta_view, basename='venta')

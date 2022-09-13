@@ -25,8 +25,10 @@ SECRET_KEY = 'django-insecure-e&2ex+q@op#csova99ryk5thpey#ja+4czceyd*odfamo#qwke
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 AUTH_USER_MODEL = 'cinetic_app.Usuario'
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = ['*']
+CORS_ORIGIN_ALLOW_ALL = True
+CORS_ALLOW_METHODS = ['GET', 'OPTIONS', 'PATCH', 'POST', 'PUT', 'DELETE',]
+CORS_ALLOW_CREDENTIALS = True
 
 # Application definition
 
@@ -40,6 +42,7 @@ INSTALLED_APPS = [
     'cinetic_app.apps.CineticAppConfig',
     'rest_framework',
     'rest_framework.authtoken',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
@@ -50,6 +53,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
 ]
 
 ROOT_URLCONF = 'cinetic.urls'

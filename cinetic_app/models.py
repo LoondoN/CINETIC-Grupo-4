@@ -1,8 +1,7 @@
-from asyncio import AbstractServer
-from email.policy import default
-from enum import unique
+
 from django.db import models
 from django.contrib.auth.models import AbstractUser
+
 # Create your models here.
 
 class Usuario(AbstractUser):
@@ -80,4 +79,4 @@ class Snack(models.Model):
     name_Snack = models.CharField(max_length=100)
     synopsis_Snack = models.CharField(max_length=100)
     price_Snack = models.CharField(max_length=100)
-    id_Combo = models.ForeignKey(Combo,on_delete=models.PROTECT)
+    id_Combo = models.ForeignKey(Combo, on_delete=models.PROTECT)
